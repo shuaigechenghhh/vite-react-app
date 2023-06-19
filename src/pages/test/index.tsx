@@ -1,4 +1,4 @@
-const Index =()=>{
+const Test =()=>{
     return <div>test</div>
 }
-export default Index
+export default Test
