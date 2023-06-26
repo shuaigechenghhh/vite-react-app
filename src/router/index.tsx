@@ -3,9 +3,15 @@ import React,{lazy} from 'react';
 import { LaptopOutlined } from '@ant-design/icons';
  export const routerList =[
   {
+    path: "/login",
+    Component: lazy(()=>import('../pages/login/index.tsx')),
+    type:'onter'
+  },
+  {
     path: "/home",
     Component: lazy(()=>import('../layout/index.tsx')),
     redirect:'/home/home1',
+    type:'inter',
     children:[
       {
         path:'home1',
@@ -25,6 +31,7 @@ import { LaptopOutlined } from '@ant-design/icons';
     path: "/test",
     Component: lazy(()=>import('../layout/index.tsx')),
     redirect:'/test/test2',
+    type:'inter',
     children:[
       {
         path:'test2',

@@ -79,8 +79,8 @@ const makeRouterMap=(list:any)=>{
     
 }
 const layout: React.FC = () => {
-  const children = routerList
-  const routerMap=makeRouterMap(routerList)
+  const children = routerList.filter((ite)=>ite.type==='inter')
+  const routerMap=makeRouterMap(children)
   const routeItem: MenuProps["items"] = children.map(
     (item: any) => {
       return {
