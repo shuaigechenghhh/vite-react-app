@@ -9,3 +9,10 @@ export const login = (param: any) =>
       "Content-Type": "application/json;charset=UTF-8",
     },
   });
+//用户列表
+export const getUserList = (param: any) =>
+  userAlova.Post("/users/list", param, {
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });

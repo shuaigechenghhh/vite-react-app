@@ -7,10 +7,10 @@
   "resolved" "https://registry.npmjs.org/@alova/adapter-axios/-/adapter-axios-1.1.1.tgz"
   "version" "1.1.1"
 
-"@alova/scene-react@^1.1.0":
-  "integrity" "sha512-zo6nIskWmJuiOziiAY1SMRiOgv+KUVRZOqig+sEu59iWOOjaIWI/rWiG7em91JWrVaST+pzSBUeW3vBN6xYMvg=="
-  "resolved" "https://registry.npmjs.org/@alova/scene-react/-/scene-react-1.1.0.tgz"
-  "version" "1.1.0"
+"@alova/scene-react@^1.1.5":
+  "integrity" "sha512-vqJId3rovi7r7TenjZof1iFJ6609MdVH0dlvMjZlMwRYLV+OUQwMPI58+O7legeWEZhFe1T0PLAN9gLOBtCWBA=="
+  "resolved" "https://registry.npmjs.org/@alova/scene-react/-/scene-react-1.1.5.tgz"
+  "version" "1.1.5"
 
 "@ampproject/remapping@^2.2.0":
   "integrity" "sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg=="
