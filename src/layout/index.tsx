@@ -11,27 +11,6 @@ const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
   key,
   label: `nav ${key}`,
 }));
-// const items2: MenuProps["items"] = [
-//   UserOutlined,
-//   LaptopOutlined,
-//   NotificationOutlined,
-// ].map((icon, index) => {
-//   const key = String(index + 1);
-
-//   return {
-//     key: `sub${key}`,
-//     icon: React.createElement(icon),
-//     label: `subnav ${key}`,
-
-//     children: new Array(4).fill(null).map((_, j) => {
-//       const subKey = index * 4 + j + 1;
-//       return {
-//         key: subKey,
-//         label: `option${subKey}`,
-//       };
-//     }),
-//   };
-// });
 const makeChildrenList = (item: any) => {
   let child: any = [];
   item.map((i: any) => {
@@ -86,13 +65,13 @@ const layout: React.FC = () => {
       return {
         ...item,
         key: `${item.path}`,
-        label: `${item.path}`,
+        label: `${item.label||item.path}`,
         children: item.children?.map((i: any) => {
           return {
             ...i,
             key: `${i.path}`,
             path:`/${i.root}/${i.path}`,
-            label: `${i.path}`,
+            label: `${i.label||i.path}`,
           };
         }),
       };

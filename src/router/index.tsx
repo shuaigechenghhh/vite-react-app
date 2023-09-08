@@ -16,13 +16,22 @@ import { LaptopOutlined } from '@ant-design/icons';
       {
         path:'home1',
         root:'home',
+        label:'表格',
         Component: lazy(()=>import('../pages/test/index')),
         icon:React.createElement(LaptopOutlined),
       },
       {
         path:'home2',
         root:'home',
+        label:'three.js',
         Component: lazy(()=>import('../pages/home/index.tsx')),
+        icon:React.createElement(LaptopOutlined)
+      },
+      {
+        path:'upload',
+        root:'upload',
+        label:'大文件上传',
+        Component: lazy(()=>import('../pages/upload/index.tsx')),
         icon:React.createElement(LaptopOutlined)
       },
     ]
