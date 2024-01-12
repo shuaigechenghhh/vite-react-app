@@ -1,6 +1,15 @@
 import { createHashRouter} from "react-router-dom";
 import React,{lazy} from 'react';
 import { LaptopOutlined } from '@ant-design/icons';
+import { useSelector, useDispatch } from "react-redux";
+import { getUserInfo,setUserInfo } from "../store/userInfo/index.ts";
+import { userInfo} from '../api/user/index.ts'
+
+const auth=async (fn:()=>any)=>{
+  const res=await userInfo()
+  console.log(res)
+    return fn
+}
  export const routerList =[
   {
     path: "/login",

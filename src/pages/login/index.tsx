@@ -5,6 +5,7 @@ import { useForm } from "@alova/scene-react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import {  useNavigate } from "react-router-dom";
 import { Button, Checkbox, Form, Input } from "antd";
+import md5 from 'md5'
 import "./index.less";
 const login: React.FC = () => {
 //   useRequest(getUserInfo());
@@ -12,7 +13,7 @@ const navigate = useNavigate();
   const initialForm = {
     username: "",
     password: "",
-    remember: false,
+    // remember: false,
   };
   const {
     // 提交状态
@@ -28,7 +29,11 @@ const navigate = useNavigate();
   } = useForm(
     (formData: any) => {
       // 可以在此转换表单数据并提交
-      return loginInfo(formData);
+      const ma5Data={
+        username: formData.username,
+        password: md5(formData.password),
+      }
+      return loginInfo(ma5Data);
     },
     {
       // 初始化表单数据
@@ -38,10 +43,10 @@ const navigate = useNavigate();
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
     submit(values)
-    onSuccess((res)=>{
-        console.log(11111,res)
-        if(res.data.status===0){
-            navigate('/home')
+    onSuccess((res:any)=>{
+        if(res.data.token){
+          localStorage.setItem("token", res.data.token);
+          navigate('/home')
         }
     })
   };

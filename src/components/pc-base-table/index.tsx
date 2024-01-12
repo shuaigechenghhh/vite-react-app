@@ -67,7 +67,6 @@ const PcBaseTable = () => {
     setPage(page)
     setPageSize(pageSize)
   }
-console.log(list,isLastPage,page,setPage,pageSize,setPageSize,pageCount,total)
   return (
     <Table columns={columns} dataSource={list as any} onChange={onChange} pagination={{total ,onChange:handlePagination}} loading={loading}/>
   );

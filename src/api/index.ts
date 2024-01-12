@@ -3,12 +3,14 @@ import ReactHook from 'alova/react';
 import GlobalFetch from 'alova/GlobalFetch';
 import { axiosRequestAdapter } from '@alova/adapter-axios';
 
+
+
 // user alova instance
 export const userAlova = createAlova({
-  baseURL: 'http://localhost:3002',
+  baseURL: 'http://localhost:9999',
   statesHook: ReactHook,
-  requestAdapter: GlobalFetch(),
-  responsed: (response) => response.json(),
+  requestAdapter: axiosRequestAdapter(),
+  responsed: (response) => response.data,
 });
 
 // upload alova instance
